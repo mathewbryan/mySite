@@ -12,9 +12,13 @@
     <p>It works!!</p>
     <p>Post - 24/7/19 </p>
 
+    {% for post in posts %}
     <div>
-        <h1><a href="/">Django Girls Blog</a></h1>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+{% endfor %}
     
     
 </body>
